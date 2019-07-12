@@ -6,7 +6,7 @@ const root = document.querySelector('#root');
 render(<hr />, root);
 
 const run = async()=> {
-  await console.log('hello');
+  await console.log('hello!!!');
 };
 
 run();

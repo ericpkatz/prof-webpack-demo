@@ -6,7 +6,8 @@
   "scripts": {
     "postinstall": "npm run webpack",
     "webpack": "webpack",
-    "webpack:dev": "npm run webpack -- --watch --mode=development"
+    "webpack:dev": "npm run webpack -- --watch --mode=development",
+    "start:dev": "npm run webpack:dev & nodemon server.js --ignore dist --ignore src"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +15,14 @@
   "babel": {
     "presets": [
       "@babel/preset-react",
-      ["@babel/preset-env", {
-        "targets": {
-          "node": 10
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": 10
+          }
         }
-      }]
+      ]
     ]
   },
   "devDependencies": {
@@ -30,5 +34,8 @@
     "react-dom": "^16.8.6",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
